@@ -1,0 +1,48 @@
+body {
+    background-color: #94AA67;
+    margin: 0;
+    padding: 0;
+}
+.atama {
+    background-color: #DBCCB1;
+    padding: 80px;
+}
+.karada {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: #DBCCB1;
+}
+table {
+    margin: 0 auto; 
+}
+th {
+    font-size: 18px;
+    text-align: left;
+    padding: 10px; 
+}
+td {
+    padding: 10px;
+    font-size: 18px;
+}
+button {
+    background-color: #DBCCB1;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 180px;
+    margin-top: 50px;
+}
+/* ボタンの色変え */
+button:hover {
+    background-color: #c79a46;
+}
+footer{
+    text-align: center;
+}
