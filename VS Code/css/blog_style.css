@@ -1,0 +1,71 @@
+/* 上のCSS */
+body{
+  background-color: #C99E8C;
+    margin: 0;
+    padding: 0;
+  }
+  
+header {
+    background-color: #465E65;
+    color: white;
+    padding: 10px 20px;
+  }
+.user-list{
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+    /* ・を削除 */
+    list-style-type: none;
+}
+li{
+  margin-left: 30px;
+}
+.title{
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+  }
+  /* ・・・・・・・・・・・・・・・・・・・・・・・・・・ */
+.blog_text_style{
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  gap: 0 1rem;
+  align-items: center;
+  margin: 20px;
+}
+.blog_text_style_space{
+width: 80px;
+text-align: left;
+margin-top: 10px;
+}
+input,select,textarea{
+  width: 300px;
+  text-align: left;
+}
+.button{
+  text-align: center;
+}
+
+
+.main-title{
+  text-align: center;
+}
+.blog-register-container{
+  width: 550px;
+  margin: 0 auto;
+}
+.main-gamen button{
+  background-color: #465E65;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+.main-gamen button:hover {
+  background-color: #255463;
+}
+footer {
+  margin-top: 10px;
+  text-align: center;
+}

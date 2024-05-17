@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編集</title>
+    <link rel="stylesheet" href="/css/blog_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="ue">
+            <div>
+                <p class="title">ブログ編集</p>
+            </div>
+            <ul class="user-list">
+                <li>名前</li>
+                <li>ブログ登録</li>
+                <li>ログアウト</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="main-gamen">
+            <h1 class="main-title">修正</h1>
+            <form action="" method="post" class="blog-register-container">
+                <div>
+                    <div class="blog_text_style">
+                        <div class="blog_text_style_space">タイトル</div>
+                        <div><input type="text" name="blogTitle"></div>
+                    </div>
+                    <div class="blog_text_style">
+                        <div class="blog_text_style_space">日付</div>
+                        <input type="date">
+                    </div>
+                    <div class="blog_text_style">   
+                        <div class="blog_text_style_space">カテゴリ</div>
+                        <select name="kategori" id="kategori">
+                            <option value="talk">雑談</option>
+                            <option value="lift">生活と趣味</option>
+                            <option value="food">おいしい食事</option>
+                            <option value="lore">勉強と知識</option>
+                        </select>
+                    </div>
+                    <div class="blog_text_style">
+                        <div class="blog_text_style_space">画像</div>
+                        <input type="file" name="blogGazo">
+                    </div>
+                    <div class="blog_text_style">
+                        <div class="blog_text_style_space">詳細</div>
+                        <textarea name="syousai" id="syousai" placeholder="書きましょう"></textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <button>更新</button>
+                    <button onclick="history.back();" type="button">戻る</button>
+                </div>
+            </form>
+            <form action="" method="post" class="button">
+                <button>削除</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <small>Copyright &copy; 個人演習問題</small>
+    </footer>
+</body>
+
+</html>
