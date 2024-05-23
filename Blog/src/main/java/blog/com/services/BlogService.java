@@ -57,4 +57,14 @@ public class BlogService {
 			return true;
 		}
 	}
+	
+	//削除処理
+	public boolean deleteBlog(Long blogId) {
+		if(blogId == null) {
+			return false;
+		}else {
+			blogDao.deleteByBlogId(blogId);
+			return true;
+		}
+	}
 }

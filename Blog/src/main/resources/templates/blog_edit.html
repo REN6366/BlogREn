@@ -54,7 +54,7 @@
                     <button onclick="history.back();" type="button">戻る</button>
                 </div>
             </form>
-            <form action="" method="post" class="button">
+            <form th:action="@{/blog/delete}" method="post" class="button">
 				<input type="hidden" name="blogId" th:value="${blog.blogId}">
                 <button>削除</button>
             </form>
