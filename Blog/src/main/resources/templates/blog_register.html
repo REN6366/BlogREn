@@ -4,27 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>編集</title>
-    <link rel="stylesheet" href="/css/blog_style.css">
+    <title>登録</title>
+    <link rel="stylesheet" th:href="@{/css/blog_style.css}">
 </head>
 
 <body>
     <header>
         <div class="ue">
             <div>
-                <p class="title">ブログ編集</p>
+                <p class="title">ブログ登録</p>
             </div>
             <ul class="user-list">
-                <li>名前</li>
-                <a href="blog_register.html">ブログ登録</a>
-                <a href="login.html">ログアウト</a>
+                <li th:text="${accountName}"></li>
+                <a th:href="@{/blog/register}">ブログ登録</a>
+                <a th:href="@{/account/logout}">ログアウト</a>
             </ul>
         </div>
     </header>
     <main>
         <section class="main-gamen">
-            <h1 class="main-title">修正</h1>
-            <form action="" method="post" class="blog-register-container">
+            <h1 class="main-title">新規追加</h1>
+            <form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data" class="blog-register-container">
                 <div>
                     <div class="blog_text_style">
                         <div class="blog_text_style_space">タイトル</div>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="blog_text_style">   
                         <div class="blog_text_style_space">カテゴリ</div>
-                        <select name="kategori" id="kategori">
+                        <select name="blogCategory" id="blogCategory">
                             <option value="talk">雑談</option>
                             <option value="lift">生活と趣味</option>
                             <option value="food">おいしい食事</option>
@@ -41,20 +41,17 @@
                     </div>
                     <div class="blog_text_style">
                         <div class="blog_text_style_space">画像</div>
-                        <input type="file" name="blogGazo">
+                        <input type="file" name="blogImage">
                     </div>
                     <div class="blog_text_style">
                         <div class="blog_text_style_space">詳細</div>
-                        <textarea name="syousai" id="syousai" placeholder="書きましょう"></textarea>
+                        <textarea name="blogArticle" id="syousai" placeholder="書きましょう"></textarea>
                     </div>
                 </div>
                 <div class="button">
-                    <button>更新</button>
+                    <button>登録</button>
                     <button onclick="history.back();" type="button">戻る</button>
                 </div>
-            </form>
-            <form action="" method="post" class="button">
-                <button>削除</button>
             </form>
         </section>
     </main>

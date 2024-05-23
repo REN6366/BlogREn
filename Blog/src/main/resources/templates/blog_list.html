@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ一覧</title>
-    <link rel="stylesheet" href="/css/blog_style.css">
+    <link rel="stylesheet" th:href="@{/css/blog_style.css}">
 </head>
 
 <body>
@@ -15,9 +15,9 @@
                 <p class="title">ブログ一覧</p>
             </div>
             <ul class="user-list">
-                <li>名前</li>
-                <a href="blog_register.html">ブログ登録</a>
-                <a href="login.html">ログアウト</a>
+                <li th:text="${accountName}"></li>
+                <a th:href="@{/blog/register}">ブログ登録</a>
+                <a th:href="@{/account/logout}">ログアウト</a>
             </ul>
         </div>
     </header>
@@ -26,18 +26,12 @@
             <section class="main-gamen">
                 <h1 class="main-title">BLOG LIST</h1>
                 <ul class="main-list">
-                    <li >
-                        <a href="">
-                            <img src="ピーチ.png" alt="">
-                            <p text="">あああ</p><br>
-                            <p text="">ううう</p>
-                        </a>
-                    </li>
-                    <li >
-                        <a href="">
-                            <img src="ピーチ.png" alt="">
-                            <p text="">えええ</p><br>
-                            <p text="">おおお</p>
+                    <li th:each="blog:${blogList}">
+                        <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+                            <img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
+                            <p th:text="${blog.blogTitle}"></p><br>
+                            <p th:text="${blog.blogCategory}"></p><br>
+							<p th:text="${blog.blogArticle}"></p>
                         </a>
                     </li>
                 </ul>
